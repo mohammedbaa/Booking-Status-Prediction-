@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 12px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form action="/predict" method="post">
+        <h2>Enter Booking Details</h2>
+        <label for="lead_time">Lead Time:</label>
+        <input type="text" id="lead_time" name="lead_time">
+
+        <label for="average_price">Average Price:</label>
+        <input type="text" id="average_price" name="average_price">
+
+        <label for="special_requests">Special Requests:</label>
+        <input type="text" id="special_requests" name="special_requests">
+
+        <label for="Month">Month:</label>
+        <input type="text" id="Month" name="Month">
+
+        <label for="Day_of_week">Day of Week:</label>
+        <input type="text" id="Day_of_week" name="Day_of_week">
+
+        <label for="Days_of_reservation">Days of Reservation:</label>
+        <input type="text" id="Days_of_reservation" name="Days_of_reservation">
+
+        <label for="market_segment_type_Online">Market Segment Type (Online):</label>
+        <input type="text" id="market_segment_type_Online" name="market_segment_type_Online">
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
